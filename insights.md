@@ -15,3 +15,7 @@ Run Insights lets you filter the shown data per master or group of masters to un
 * You can filter by one or multiple connected masters.
 * You can remove specific masters from the filtered master list or clear all.
 * It stores the filter setting in your local storage, to persist the filter when you return.
+
+1. Go to https://devoptics.beedemo.net in your browser and login with the email **beedemo.guest@gmail.com** and the password provided by your instructor <p><img src="img/insights/devoptics_login.png" width=800/>
+2. 
+

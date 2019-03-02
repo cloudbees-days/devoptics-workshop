@@ -3,4 +3,10 @@ This workshop will show how DevOptics allows organizations to measure, analyze a
 
 # Training Prerequisites
 
-In order to follow along with the hands on portion of the workshop students should have completed the [CloudBees Core Pipeline Workshop](https://github.com/cloudbees-days/cloudbees-core-workshop).
+In order to follow along with the hands on portion of the workshop students should have completed the [CloudBees Core Pipeline Workshop](https://github.com/cloudbees-days/cloudbees-core-workshop). At a bare minimum you will need to complete the following if you did not go through the [CloudBees Core Pipeline Workshop](https://github.com/cloudbees-days/cloudbees-core-workshop) before this workshop:
+
+* [CloudBees Core Workshop Setup](https://github.com/cloudbees-days/cloudbees-core-workshop/blob/master/Setup.md)
+* [Add GitHub Credentials to Your Team Master](https://github.com/cloudbees-days/cloudbees-core-workshop/blob/master/declarative-basics.md#add-github-credentials-to-your-team-master)
+* [Enable Webhook Management for GitHub](https://github.com/cloudbees-days/cloudbees-core-workshop/blob/master/declarative-basics.md#enable-webhook-management-for-github)
+
+Once the above exerciese are completed you may continue to [DevOptics Run Insights](./insights.md)
