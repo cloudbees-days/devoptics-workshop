@@ -17,6 +17,6 @@ Run Insights lets you filter the shown data per master or group of masters to un
 * It stores the filter setting in your local storage, to persist the filter when you return.
 
 1. Go to https://devoptics.beedemo.net in your browser and login with the email **beedemo.guest@gmail.com** and the password provided by your instructor <p><img src="img/insights/devoptics_login.png" width=800/>
-2. Click on the graph icon in the left menu to switch to the Run Insights view <p><img src="img/insights/devoptics_login.png" width=800/>
+2. Click on the graph icon in the left menu to switch to the Run Insights view <p><img src="img/insights/insights_view.png" width=800/>
 3. The initial 
 
