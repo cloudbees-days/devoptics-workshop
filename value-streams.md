@@ -44,4 +44,8 @@ Once modeled you can instrument your Jenkins Pipelines from the CloudBees Core P
   - **Save** the form
   7. Click on the **Save** button in the upper-left to save the Value Stream <p><img src="img/streams/save_value_stream.png" width=800/>
 
+After you save your initial Value Stream, your instructor will commit a number of changes to the ***cloudbees-days/helloworld-api*** repository to simulate [DevOptics Performance metrics](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#_devops_performance_metrics).
+
 ### Value Stream JSON Editor
+
+In addition to the Visual Editor, DevOptics also provides a JSON editor.
