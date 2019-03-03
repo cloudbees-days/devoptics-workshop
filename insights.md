@@ -9,6 +9,13 @@ DevOptics Run Insights provides CD Platform monitoring and help shared services 
 * Run completion and their status - successful, failed, etc.
 * Optimal time for maintenance/upgrades
 
+## Take a Tour of DevOptics Run Insights
+1. Go to https://devoptics.beedemo.net in your browser and login with the email **beedemo.guest@gmail.com** and the password provided by your instructor <p><img src="img/insights/devoptics_login.png" width=800/>
+2. Click on the graph icon in the left menu to switch to the Run Insights view <p><img src="img/insights/insights_view.png" width=800/>
+3. Next click on the **?** left menu item and then select **Tour Run Insights** from the pop-up menu <p><img src="img/insights/insights_view.png" width=800/>
+4. Complete the tour and then continue to the next exercise <p><img src="img/insights/start_tour.png" width=800/>
+
+
 ## Filter by Team Master
 Run Insights lets you filter the shown data per master or group of masters to understand activity and performance of one or more specific masters.
 
@@ -16,12 +23,11 @@ Run Insights lets you filter the shown data per master or group of masters to un
 * You can remove specific masters from the filtered master list or clear all.
 * It stores the filter setting in your local storage, to persist the filter when you return.
 
-1. Go to https://devoptics.beedemo.net in your browser and login with the email **beedemo.guest@gmail.com** and the password provided by your instructor <p><img src="img/insights/devoptics_login.png" width=800/>
-2. Click on the graph icon in the left menu to switch to the Run Insights view <p><img src="img/insights/insights_view.png" width=800/>
-3. The initial view will show you insights for all Jenkins Masters that are connected to the ***cloudbees-days*** account. To filter by your Team Master search for your Team Master name in the **Filter by Connected Masters...** search input and select your Team Master from the list <p><img src="img/insights/insights_filter_by_master_input.png" width=800/>
-4. Now you will only see the insights for your Team Master. 
+
+1. The initial view will show you insights for all Jenkins Masters that are connected to the ***cloudbees-days*** account. To filter by your Team Master search for your Team Master name in the **Filter by Connected Masters...** search input and select your Team Master from the list <p><img src="img/insights/insights_filter_by_master_input.png" width=800/>
+2. Now you will only see the insights only for your Team Master. 
 
 To learn more about DevOptics Run Insights refer to [CloudBees' Run Insights documentation](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/).
 
-Next we want to take a look at DevOptics Value Streams but first we need to set-up a Jenkins Pipeline - to speed things up, we will use [CloudBees Pipeline Catalog Templates](./catalog-templates.md).
+Next we want to take a look at [DevOptics Value Streams](./value-streams.md).
 
