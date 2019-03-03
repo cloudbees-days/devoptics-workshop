@@ -12,7 +12,7 @@ DevOptics Run Insights provides CD Platform monitoring and help shared services 
 ## Take a Tour of DevOptics Run Insights
 1. Go to https://devoptics.beedemo.net in your browser and login with the email **beedemo.guest@gmail.com** and the password provided by your instructor <p><img src="img/insights/devoptics_login.png" width=800/>
 2. Click on the graph icon in the left menu to switch to the Run Insights view <p><img src="img/insights/insights_view.png" width=800/>
-3. Next click on the **?** left menu item and then select **Tour Run Insights** from the pop-up menu <p><img src="img/insights/insights_view.png" width=800/>
+3. Next click on the **?** left menu item and then select **Tour Run Insights** from the pop-up menu <p><img src="img/insights/tour_run_insights.png" width=800/>
 4. Complete the tour and then continue to the next exercise <p><img src="img/insights/start_tour.png" width=800/>
 
 
