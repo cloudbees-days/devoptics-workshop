@@ -29,5 +29,5 @@ Run Insights lets you filter the shown data per master or group of masters to un
 
 To learn more about DevOptics Run Insights refer to [CloudBees' Run Insights documentation](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/).
 
-Next we want to take a look at [DevOptics Value Streams](./value-streams.md).
+The next DevOptics feature that we will look at is [DevOptics Value Streams](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/), but before we do that we are going quickly create an end-to-end CI/CD Pipeline for your fork of the cloudbees-day/helloworld-nodejs repository with a [CloudBees Core Pipeline Catalog Template](./catalog-templates.md).
 

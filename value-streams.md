@@ -8,7 +8,7 @@ A CloudBees DevOptics Value Stream models a complex continuous delivery process 
 * View contributing components
 
 ## Value Stream Mapping for Microservices
-Using the two applications that we created Pipelines for in the CloudBees Core Pipelines Workshop we show how you can use DevOptics Value Streams to map the software delivery process of loosely coupled microservices as separated streams as part of a holistic value stream
+Using the two applications used in the CloudBees Core Pipelines Workshop, we will show how you can use DevOptics Value Streams to map the software delivery process of loosely coupled microservices as separated streams as part of a holistic value stream.
 
 ### Value Stream Visual Editor
 DevOptics visual editor lets you model different phases and gates of your value stream.
