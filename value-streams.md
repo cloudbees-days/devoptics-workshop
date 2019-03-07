@@ -132,7 +132,7 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 
 Before you fix your fork of the **helloworld-nodejs** repostiory we will run it again by making a simple change and commiting it on your **development** branch. 
 
-1. Open the GitHub editor for the `Jenkinsfile` file in the **development** branch of your forked **helloworld-nodejs** repository, add a blank line at the bottom and then commit the change to the **development** branch with the commit message ***UI-1001 tweaked message***
+1. Open the GitHub editor for the `Jenkinsfile` file in the **development** branch of your forked **helloworld-nodejs** repository, add a blank line at the bottom and then commit the change to the **development** branch with the commit message ***UI-1001 still broken***
 2. Once again, your **[GitHub username]-hello** Multibranch **development** job should run and fail and in DevOptics you should see that the **UI Dev** gate has 1 ticket in it and that it failed
 3. Now we will fix your app. Open the GitHub editor for the `hello.js` file in the **development** branch of your forked **helloworld-nodejs** repository, on line 13 fix the misspelled ***Worlld*** and then commit the change to the **development** branch with the commit message ***UI-1001 fixed misspelling***
 4. Now your job should complete successfully and the **UI Dev** gate should show that it finished successfully - what is your MTTR for the **UI Dev** gate? What is the MTTR for the entire Value Stream?
