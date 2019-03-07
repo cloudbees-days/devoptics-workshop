@@ -124,7 +124,7 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 	]
 }
 ```
-5. Replace all occurences of **beedemo-dev** with your GitHub username.
+5. Replace all occurences of **beedemo-dev** in the JSON with your GitHub username.
 6. Click the **Save changes** button <p><img src="img/streams/save_json.png" width=800/>
 7. You will have a new Value Stream and the **API Master** gate should already have tickets in it <p><img src="img/streams/api_gate.png" width=800/>
 
