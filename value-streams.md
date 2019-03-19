@@ -26,24 +26,24 @@ Once modeled you can instrument the Jenkins Pipelines from the CloudBees Core Pi
 1. Go back to DevOptics in your browser and switch to the **Value Streams** view and click on the **Create New** button in the upper right corner to open open the [**Value Stream Visual Editor**](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#devoptics-visual-editor)<p><img src="img/streams/value_streams_views.png" width=800/>
 2. Click on the default title in the upper-left and change the title to be **{your GitHub username} helloworld-api** and hit return <p><img src="img/streams/change_title.png" width=800/>
 3. Next click on the **Untitled Gate** below the **Build** phase and then click on the **cog** to configure the gate <p><img src="img/streams/configure_build_gate.png" width=500/>
-4. Fill out the gate configuration form - **IMPORTANT: Replace `your GitHub username` with your GitHub username/Team Master name and replace `GitHub Org name` with your GitHub Organization name you are usign for this workshop**:
+4. Fill out the gate configuration form - **IMPORTANT:** Replace ***{your GitHub username}*** with your GitHub username/Team Master name and replace ***{GitHub Org name}*** with your GitHub Organization name you are usign for this workshop:
   - **Gate Name**: development branch
-  - **Master**: https://cje.workshop.beedemo.net/teams-`your GitHub username`/
-  - **Job**: `your GitHub username`/`GitHub Org name`/helloworld-api/development
+  - **Master**: https://cje.workshop.beedemo.net/teams-{your GitHub username}/
+  - **Job**: {your GitHub username}/{GitHub Org name}/helloworld-api/development
   - **Phase**: Build
   - leave the other fields as is <p><img src="img/streams/build_gate_form.png" width=500/>
   - **Save** the form
 5. Click on the **Untitled Gate** below the **Test** phase, then click on the **cog** to configure the gate and fill out the gate configuration form:
   - **Gate Name**: test branch
-  - **Master**: https://cje.workshop.beedemo.net/teams-`your GitHub username`/
-  - **Job**: `your GitHub username`/`GitHub Org name`/helloworld-api/test
+  - **Master**: https://cje.workshop.beedemo.net/teams-{your GitHub username}/
+  - **Job**: {your GitHub username}/{GitHub Org name}/helloworld-api/test
   - **Phase**: Test
   - leave the other fields as is 
   - **Save** the form
 6. Click on the **Untitled Gate** below the **Release** phase, then click on the **cog** to configure the gate and fill out the gate configuration form:
   - **Gate Name**: master branch
-  - **Master**: https://cje.workshop.beedemo.net/teams-`your GitHub username`/
-  - **Job**: `your GitHub username`/`GitHub Org name`/helloworld-api/master
+  - **Master**: https://cje.workshop.beedemo.net/teams-{your GitHub username}/
+  - **Job**: {your GitHub username}/{GitHub Org name}/helloworld-api/master
   - **Phase**: Release
   - Check the **This is a deployment job** checkbox <p><img src="img/streams/release_gate_form.png" width=500/>
   - **Save** the form
@@ -62,7 +62,7 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 1. Go back to DevOptics in your browser and switch to the **Value Streams** view and click on the **Create New** button in the upper right corner <p><img src="img/streams/value_streams_views.png" width=800/> This will open the [**Value Stream Visual Editor**](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#devoptics-visual-editor)
 2. Click on the default title in the upper-left and change the title to be **{your GitHub username} Hello App**, hit return and then click the **Save** button in the upper-left to save the Value Stream<p><img src="img/streams/json_change_title.png" width=800/>
 3. Next, click on the the 3 vertical dots next to the ***Seach by Ticket Id*** and select **Edit JSON** from the menu <p><img src="img/streams/edit_json.png" width=800/>
-4. Delete the **Value Stream JSON** content and replace with the following:
+4. Delete the **Value Stream JSON** content and replace with the following, replacing all occurences of **{your GitHub username}**, both for the `master` value and the `job` value, in the JSON with your GitHub username and ***{GitHub Org name}*** with the GitHub Organization you are using for this workshop:
 ```
 {
 	"phases": [
@@ -73,15 +73,15 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 				{
 					"id": "5eMvajavv",
 					"name": "API Dev",
-					"master": "https://cje.workshop.beedemo.net/teams-`your GitHub username`/",
-					"job": "`your GitHub username`v/`GitHub Org name`/helloworld-api/development",
+					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"job": "{your GitHub username}/{GitHub Org name}/helloworld-api/development",
 					"feeds": "v-4fcgpTY"
 				},
 				{
 					"id": "ZF5Ou-7vv",
 					"name": "UI Dev ",
-					"master": "https://cje.workshop.beedemo.net/teams-`your GitHub username`/",
-					"job": "`your GitHub username`/`GitHub Org name`/helloworld-nodejs/development",
+					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"job": "{your GitHub username}/{GitHub Org name}/helloworld-nodejs/development",
 					"feeds": "release"
 				}
 			]
@@ -93,8 +93,8 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 				{
 					"id": "v-4fcgpTY",
 					"name": "API Test",
-					"master": "https://cje.workshop.beedemo.net/teams-`your GitHub username`/",
-					"job": "`your GitHub username`/`GitHub Org name`/helloworld-api/test",
+					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"job": "{your GitHub username}/{GitHub Org name}/helloworld-api/test",
 					"feeds": "yiK5MUR5Q"
 				}
 			]
@@ -106,8 +106,8 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 				{
 					"id": "yiK5MUR5Q",
 					"name": "API Master",
-					"master": "https://cje.workshop.beedemo.net/teams-`your GitHub username`/",
-					"job": "`your GitHub username`/`GitHub Org name`/helloworld-api/master",
+					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"job": "{your GitHub username}/{GitHub Org name}/helloworld-api/master",
 					"feeds": "release",
 					"type": "deployment"
 				}
@@ -120,8 +120,8 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 				{
 					"id": "release",
 					"name": "UI Master",
-					"master": "https://cje.workshop.beedemo.net/teams-`your GitHub username`/",
-					"job": "`your GitHub username`/`GitHub Org name`/helloworld-nodejs/master",
+					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"job": "{your GitHub username}/{GitHub Org name}/helloworld-nodejs/master",
 					"type": "deployment",
 					"feeds": null
 				}
@@ -130,9 +130,8 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 	]
 }
 ```
-5. Replace all occurences of **`your GitHub username`**, both for the `master` value and the `job` value, in the JSON with your GitHub username.
-6. Click the **Save changes** button <p><img src="img/streams/save_json.png" width=800/>
-7. You will have a new Value Stream and the **API Master** gate should already have tickets in it <p><img src="img/streams/api_gate.png" width=800/>
+5. Click the **Save changes** button <p><img src="img/streams/save_json.png" width=800/>
+6. You will have a new Value Stream and the **API Master** gate should already have tickets in it <p><img src="img/streams/api_gate.png" width=800/>
 
 ### Fix Your **helloworld-nodejs** Application
 
