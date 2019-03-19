@@ -1,5 +1,5 @@
 # DevOptics Run Insights
-DevOptics Run Insights provides CD Platform monitoring and help shared services teams improve DevOps performance by exposing infrastructure inefficiencies, allowing automation constraints to be uncovered and removed. It provides you with insights into:
+[DevOptics Run Insights](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/ target="_blank") provides CD Platform monitoring and helps shared services teams improve DevOps performance by exposing infrastructure inefficiencies, allowing automation constraints to be uncovered and removed. It provides you with insights into:
 
 * Server workloads
 * Job and pipeline activity
@@ -10,7 +10,7 @@ DevOptics Run Insights provides CD Platform monitoring and help shared services 
 * Optimal time for maintenance/upgrades
 
 ## Take a Tour of DevOptics Run Insights
-1. Go to https://devoptics.beedemo.net in your browser and login with the email **beedemo.guest@gmail.com** and the password provided by your instructor <p><img src="img/insights/devoptics_login.png" width=800/>
+1. Go to https://devoptics.cloudbees.com in your browser and login with the email **beedemo.guest@gmail.com** and the password provided by your instructor <p><img src="img/insights/devoptics_login.png" width=800/>
 2. Click on the graph icon in the left menu to switch to the Run Insights view <p><img src="img/insights/insights_view.png" width=800/>
 3. Next click on the **?** left menu item and then select **Tour Run Insights** from the pop-up menu <p><img src="img/insights/tour_run_insights.png" width=800/>
 4. Complete the tour and then continue to the next exercise <p><img src="img/insights/start_tour.png" width=800/>
