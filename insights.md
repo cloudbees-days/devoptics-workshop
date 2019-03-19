@@ -1,5 +1,5 @@
 # DevOptics Run Insights
-[DevOptics Run Insights](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/ target="_blank") provides CD Platform monitoring and helps shared services teams improve DevOps performance by exposing infrastructure inefficiencies, allowing automation constraints to be uncovered and removed. It provides you with insights into:
+[DevOptics Run Insights](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/) provides CD Platform monitoring and helps shared services teams improve DevOps performance by exposing infrastructure inefficiencies, allowing automation constraints to be uncovered and removed. It provides you with insights into:
 
 * Server workloads
 * Job and pipeline activity
