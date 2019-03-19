@@ -7,6 +7,6 @@ In order to follow along with the hands on portion of the workshop students shou
 
 * [CloudBees Core Workshop Setup](https://github.com/cloudbees-days/cloudbees-core-workshop/blob/master/Setup.md)
 * [Add GitHub Credentials to Your Team Master](https://github.com/cloudbees-days/cloudbees-core-workshop/blob/master/declarative-basics.md#add-github-credentials-to-your-team-master)
-* [Enable Webhook Management for GitHub](https://github.com/cloudbees-days/cloudbees-core-workshop/blob/master/declarative-basics.md#enable-webhook-management-for-github)
+* [Create a GitHub Organization Folder Pipeline Project](https://github.com/cloudbees-days/cloudbees-core-workshop/blob/master/declarative-basics.md#create-a-github-organization-folder-pipeline-project)
 
 Once the above exerciese are completed you may continue to [DevOptics Run Insights](./insights.md)

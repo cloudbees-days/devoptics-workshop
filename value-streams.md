@@ -10,6 +10,11 @@ A CloudBees DevOptics Value Stream models a complex continuous delivery process 
 ## Value Stream Mapping for Microservices
 Using the two applications used in the CloudBees Core Pipelines Workshop, we will show how you can use DevOptics Value Streams to map the software delivery process of loosely coupled microservices as separated streams as part of a holistic value stream.
 
+### Fork the **helloworld-api** repository.
+The workshop utilizes the **helloworld-api** repository from the [CloudBees Days GitHub Organization](https://github.com/cloudbees-days). Fork the **helloworld-api** repository into the GitHub Organization that you created for the workshops (if you are not sure how to fork a repository - see this [GitHub Guide on forking](https://guides.github.com/activities/forking/)):
+
+* https://github.com/cloudbees-days/helloworld-api
+
 ### Value Stream Visual Editor
 DevOptics visual editor lets you model different phases and gates of your value stream.
 
@@ -18,34 +23,33 @@ DevOptics visual editor lets you model different phases and gates of your value 
 
 Once modeled you can instrument your Jenkins Pipelines from the CloudBees Core Pipeline Workshop so DevOptics is able to track tickets and commits flowing through the value stream end to end.
 
-Fork the **helloworld-api** repository.
-
 1. Go back to DevOptics in your browser and switch to the **Value Streams** view and click on the **Create New** button in the upper right corner <p><img src="img/streams/value_streams_views.png" width=800/> This will open the [**Value Stream Visual Editor**](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#devoptics-visual-editor)
 2. Click on the default title in the upper-left and change the title to be **{your GitHub username} helloworld** and hit return <p><img src="img/streams/change_title.png" width=800/>
 3. Next click on the **Untitled Gate** below the **Build** phase and then click on the **cog** to configure the gate <p><img src="img/streams/configure_build_gate.png" width=500/>
-4. Fill out the gate configuration form:
+4. Fill out the gate configuration form - **IMPORTANT: Replace `your GitHub username` with your GitHub username**:
   - **Gate Name**: development branch
-  - **Master**: https://cje.workshop.beedemo.net/teams-beedemo-dev/
-  - **Job**: beedemo-dev/helloworld-api/development
+  - **Master**: https://cje.workshop.beedemo.net/teams-`your GitHub username`/
+  - **Job**: `your GitHub username`/helloworld-api/development
   - **Phase**: Build
   - leave the other fields as is <p><img src="img/streams/build_gate_form.png" width=500/>
   - **Save** the form
 5. Click on the **Untitled Gate** below the **Test** phase, then click on the **cog** to configure the gate and fill out the gate configuration form:
   - **Gate Name**: test branch
-  - **Master**: https://cje.workshop.beedemo.net/teams-beedemo-dev/
-  - **Job**: beedemo-dev/helloworld-api/test
+  - **Master**: https://cje.workshop.beedemo.net/teams-`your GitHub username`/
+  - **Job**: `your GitHub username`/helloworld-api/test
   - **Phase**: Test
   - leave the other fields as is 
   - **Save** the form
 6. Click on the **Untitled Gate** below the **Release** phase, then click on the **cog** to configure the gate and fill out the gate configuration form:
   - **Gate Name**: master branch
-  - **Master**: https://cje.workshop.beedemo.net/teams-beedemo-dev/
-  - **Job**: beedemo-dev/helloworld-api/master
+  - **Master**: https://cje.workshop.beedemo.net/teams-`your GitHub username`/
+  - **Job**: `your GitHub username`/helloworld-api/master
   - **Phase**: Release
   - Check the **This is a deployment job** checkbox <p><img src="img/streams/release_gate_form.png" width=500/>
   - **Save** the form
   7. Click on the **Save** button in the upper-left to save the Value Stream <p><img src="img/streams/save_value_stream.png" width=800/>
 
+## DevOptics Performance Metrics
 After you save your initial Value Stream, your instructor will commit a number of changes to the ***cloudbees-days/helloworld-api*** repository to simulate [DevOptics Performance metrics](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#_devops_performance_metrics).
 
 TODO - Add explanations as changes are being processed
@@ -126,7 +130,7 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 	]
 }
 ```
-5. Replace all occurences of **beedemo-dev** in the JSON with your GitHub username.
+5. Replace all occurences of **beedemo-dev**, both for the `master` value and the `job` value, in the JSON with your GitHub username.
 6. Click the **Save changes** button <p><img src="img/streams/save_json.png" width=800/>
 7. You will have a new Value Stream and the **API Master** gate should already have tickets in it <p><img src="img/streams/api_gate.png" width=800/>
 
