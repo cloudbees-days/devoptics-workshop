@@ -47,17 +47,37 @@ Once modeled you can instrument the Jenkins Pipelines from the CloudBees Core Pi
   - **Phase**: Release
   - Check the **This is a deployment job** checkbox <p><img src="img/streams/release_gate_form.png" width=500/>
   - **Save** the form
-  7. Click on the **Save** button in the upper-left to save the Value Stream <p><img src="img/streams/save_value_stream.png" width=800/>
+7. Click on the **Save** button in the upper-left to save the Value Stream <p><img src="img/streams/save_value_stream.png" width=800/>
 
-## DevOptics Performance Metrics
-After you save your initial Value Stream, your instructor will commit a number of changes to the ***cloudbees-days/helloworld-api*** repository to simulate [DevOptics Performance metrics](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#_devops_performance_metrics).
+### DevOptics Performance Metrics
+Now that you have an initial Value Stream, we will commit a number of changes to your fork of the  ***helloworld-api*** repository to simulate [DevOptics Performance metrics](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#_devops_performance_metrics).
 
-TODO - Add explanations as changes are being processed
-* Update the Jenkinsfile to fail and commit a change with a JIRA ticket id of **API-1001** 
+1. Navigate to and open the GitHub editor for the `Jenkinsfile` file in **development** branch of your forked **helloworld-api** repository
+2. Update the Jenkinsfile to fail in the `Test` stage by adding the following `error` step
+```
+        error 'fake error to force failure in test stage/gate'
+```
+3. Commit the change to your **development** branch with a commit message of: **API-1001 new feature** 
+4. Once the job for your **development** branch completes, switch to your DevOptics Value Streams window and you should see the **development branch** gate updated to show that it has 1 ticket in it and that it completed successfully<p><img src="img/streams/metrics_dev_branch.png" width=600/>
+5. Now we will create a [Pull Request](https://help.github.com/en/articles/creating-a-pull-request) between the **development** branch and **test** branch of your forked **helloworld-api** repository. Navigate to your forked **helloworld-api** repository in GitHub - click on the **New pull request** button
+6. Change the **base repository** to the **test** branch of your forked **helloworld-api** repository (not the **cloudbees-days** repository), add a comment and then click the **Create pull request** button
+7. Click the **Merge pull request** button and then click the **Confirm merge** button but **DO NOT delete the development branch**
+8. Switch to your DevOptics Value Streams window and you should eventually see the **test branch** gate updated to show that it has 1 ticket in it and that it failed<p><img src="img/streams/metrics_test_branch_fail.png" width=700/>
+9. Delete the `error` step from the `Test` stage on the **development** branch of your fork of the  ***helloworld-api*** repository and commit the change to the **development** branch with the following commit message: **API-1001 fix**
+10. Create another [Pull Request](https://help.github.com/en/articles/creating-a-pull-request) between the **development** branch and **test** branch of your forked **helloworld-api** repository. Navigate to your forked **helloworld-api** repository in GitHub - click on the **New pull request** button
+11. Change the **base repository** to the **test** branch of your forked **helloworld-api** repository (not the **cloudbees-days** repository), add a comment and then click the **Create pull request** button
+12. Click the **Merge pull request** button and then click the **Confirm merge** button but **DO NOT delete the development branch**
+13. Switch to your DevOptics Value Streams window and you should eventually see the **test branch** gate updated to show that it has 1 ticket in it and that it is successful. Note the *Change Failure Rate* and the *Mean Time To Recovery* of the **test gate**<p><img src="img/streams/metrics_test_branch_success.png" width=700/>
+14. So now we are ready to merge to the **master** branch and release. Create another [Pull Request](https://help.github.com/en/articles/creating-a-pull-request) between the **test** branch and **master** branch of your forked **helloworld-api** repository. Navigate to your forked **helloworld-api** repository on the **test** branch in GitHub - click on the **New pull request** button<p><img src="img/streams/metrics_test_to_master_pr.png" width=700/>
+15. Change the **base repository** to the **master** branch of your forked **helloworld-api** repository (not the **cloudbees-days** repository), add a comment and then click the **Create pull request** button
+16. Click the **Merge pull request** button and then click the **Confirm merge** button but **DO NOT delete the test branch**
+17. Switch to your DevOptics Value Streams window and you should eventually see the **master branch** gate updated to show that it has 1 ticket in it and that it is successful<p><img src="img/streams/metrics_master_branch_success.png" width=700/>
+18. Next, click on the **master branch** gate and you will now have gate metics for *Mean Lead Time*, *Deployment Frequency*, *Mean Queue Time* and *Mean Processing Time*.<p><img src="img/streams/metrics_master_gate_df.png" width=700/>
+19. Next, click on the *chevron* icon to switch to view the metrics for the entire value stream as opposed to jsut the **master gate**<p><img src="img/streams/metrics_for_value_stream.png" width=700/>
 
 ### Value Stream JSON Editor
 
-In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSON editor is only available to update a Value Stream created by the Visual Editor.
+In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSON editor is only available to update a Value Stream created by the Visual Editor not create one.
 
 1. Go back to DevOptics in your browser and switch to the **Value Streams** view and click on the **Create New** button in the upper right corner <p><img src="img/streams/value_streams_views.png" width=800/> This will open the [**Value Stream Visual Editor**](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#devoptics-visual-editor)
 2. Click on the default title in the upper-left and change the title to be **{your GitHub username} Hello App**, hit return and then click the **Save** button in the upper-left to save the Value Stream<p><img src="img/streams/json_change_title.png" width=800/>
