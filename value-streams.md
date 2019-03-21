@@ -87,15 +87,18 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 {
 	"phases": [
 		{
+			"id": "TSlZ0sqDuh",
 			"name": "Build",
 			"gates": [
 				{
+					"id": "5eMvajavv",
 					"name": "API Dev",
 					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
 					"job": "{your GitHub username}/{GitHub Org name}/helloworld-api/development",
 					"feeds": "v-4fcgpTY"
 				},
 				{
+					"id": "ZF5Ou-7vv",
 					"name": "UI Dev ",
 					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
 					"job": "{your GitHub username}/{GitHub Org name}/helloworld-nodejs/development",
@@ -105,8 +108,10 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 		},
 		{
 			"name": "Test",
+			"id": "QLggEt9hI",
 			"gates": [
 				{
+					"id": "v-4fcgpTY",
 					"name": "API Test",
 					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
 					"job": "{your GitHub username}/{GitHub Org name}/helloworld-api/test",
@@ -116,6 +121,7 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 		},
 		{
 			"name": "Deploy API",
+			"id": "ExwDnpexcA",
 			"gates": [
 				{
 					"id": "yiK5MUR5Q",
@@ -129,6 +135,7 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 		},
 		{
 			"name": "Deploy App",
+			"id": "8THbC9EXqX",
 			"gates": [
 				{
 					"id": "release",
