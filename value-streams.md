@@ -157,8 +157,51 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 
 Before you fix your fork of the **helloworld-nodejs** repostiory we will run it again by making a simple change and commiting it on your **development** branch. 
 
-1. Open the GitHub editor for the `Jenkinsfile` file in the **development** branch of your forked **helloworld-nodejs** repository, add a blank line at the bottom and then commit the change to the **development** branch with the commit message ***UI-1001 still broken***
-2. Once again, your **[GitHub username]-hello** Multibranch **development** job should run and fail and in DevOptics you should see that the **UI Dev** gate has 1 ticket in it and that it failed
+1. Open the GitHub editor for the `Jenkinsfile` file in the **development** branch of your forked **helloworld-nodejs** repository, replace the **Test** `stage` with the following **Web Tests** stage and then commit the change to the **development** branch with the commit message ***UI-1001 still broken***
+```
+stage('Web Tests') {
+      agent {
+        kubernetes {
+          label 'nodejs-testcafe'
+          yaml testPodYaml
+        }
+      }
+      when {
+        beforeAgent true
+        branch 'development'
+      }
+      stages {
+        stage('Nodejs Setup') {
+          steps {
+            checkout scm
+            defineProps('.nodejs-app', [npmPackages: 'express pug'])            
+            container('nodejs') {
+              sh """
+                npm i -S ${npmPackages}
+                node ./hello.js &
+              """
+            }
+          }   
+        }
+        stage('Testcafe') {
+          steps {
+            container('testcafe') {
+              sh '/opt/testcafe/docker/testcafe-docker.sh "chromium --no-sandbox" tests/*.js -r xunit:res.xml'
+            }
+          }   
+        }
+      }  
+      post {
+        success {
+          stash name: 'app', includes: '*.js, public/**, views/*, Dockerfile'
+        }
+        always {
+          junit 'res.xml'
+        }
+      } 
+    }
+```
+2. Once again, your **helloworld-nodejs** Multibranch **development** job should run and fail and in DevOptics you should see that the **UI Dev** gate has 1 ticket in it and that it failed
 3. Now we will fix your app. Open the GitHub editor for the `hello.js` file in the **development** branch of your forked **helloworld-nodejs** repository, on line 13 fix the misspelled ***Worlld*** and then commit the change to the **development** branch with the commit message ***UI-1001 fixed misspelling***
 4. Now your job should complete successfully and the **UI Dev** gate should show that it finished successfully - what is your MTTR for the **UI Dev** gate? What is the MTTR for the entire Value Stream?
 5. Now that you have fixed your **helloworld-nodejs** application it is time to merge to the **master** branch and deploy. Create a [Pull Request](https://help.github.com/en/articles/creating-a-pull-request) between the **development** branch and **master** branch of your forked **helloworld-nodejs** repository. 
