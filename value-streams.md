@@ -163,7 +163,7 @@ stage('Web Tests') {
       agent {
         kubernetes {
           label 'nodejs-testcafe'
-          yaml testPodYaml
+          yamlFile 'nodejs-pod.yaml'
         }
       }
       when {
