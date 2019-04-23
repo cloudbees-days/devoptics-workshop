@@ -157,7 +157,7 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 
 Before you fix your fork of the **helloworld-nodejs** repostiory we will run it again by making a simple change and commiting it on your **development** branch. 
 
-1. Open the GitHub editor for the `Jenkinsfile` file in the **development** branch of your forked **helloworld-nodejs** repository, replace the **Test** `stage` with the following **Web Tests** stage and then commit the change to the **development** branch with the commit message ***UI-1001 still broken***
+1. Open the GitHub editor for the `Jenkinsfile` file in the **development** branch of your forked **helloworld-nodejs** repository, add the following `library 'cb-days@master'` for a shared librare above the `pipeline` block and then replace the **Test** `stage` with the following **Web Tests** stage and then commit the change to the **development** branch with the commit message ***UI-1001 still broken***
 ```
 stage('Web Tests') {
       agent {
