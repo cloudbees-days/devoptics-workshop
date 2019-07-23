@@ -29,5 +29,3 @@ Run Insights lets you filter the shown data per master or group of masters to un
 
 To learn more about DevOptics Run Insights refer to [CloudBees' Run Insights documentation](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/).
 
-The next DevOptics feature that we will look at is [DevOptics Value Streams](./value-streams.md).
-
