@@ -209,3 +209,5 @@ stage('Web Tests') {
 7. A job will be created for the pull request and once it has completed successfully your pull request will show that **All checks have passed**. Go ahead and click the **Merge pull request** button and then click the **Confirm merge** button but DO NOT delete the **development** branch
 8. In your DevOptics Value Stream you should see the **UI-1001** ticket move from the **UI Dev** gate to the **UI Master** gate. What is your deployment frequency?
 
+The next DevOptics feature that we will look at is [DevOptics Run Insights](./insights.md).
+
