@@ -7,14 +7,6 @@ A CloudBees DevOptics Value Stream models a complex continuous delivery process 
 * Find components ready for testing
 * View contributing components
 
-## Value Stream Mapping for Microservices
-Using the two applications used in the [CloudBees Core Pipeline Workshop](https://github.com/cloudbees-days/cloudbees-core-workshop), we will show how you can use DevOptics Value Streams to map the software delivery process of loosely coupled microservices as separated streams as part of a holistic value stream.
-
-### Fork the **helloworld-api** repository.
-The workshop utilizes the **helloworld-api** repository from the [CloudBees Days GitHub Organization](https://github.com/cloudbees-days). Fork the **helloworld-api** repository into the [GitHub Organization that you created for the workshops](https://github.com/cloudbees-days/cloudbees-core-workshop/blob/master/Setup.md#create-a-github-organization) (if you are not sure how to fork a repository - see this [GitHub Guide on forking](https://guides.github.com/activities/forking/)):
-
-* https://github.com/cloudbees-days/helloworld-api
-
 ### Value Stream Visual Editor
 DevOptics visual editor lets you model different phases and gates of your value stream.
 
@@ -93,55 +85,60 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 				{
 					"id": "5eMvajavv",
 					"name": "API Dev",
-					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"master": "https://workshop.cb-sa.io/teams-{your GitHub username}/",
 					"job": "{your GitHub username}/{GitHub Org name}/helloworld-api/development",
-					"feeds": "v-4fcgpTY"
+					"feeds": "v-4fcgpTY",
+					"fanout": []
 				},
 				{
 					"id": "ZF5Ou-7vv",
 					"name": "UI Dev ",
-					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"master": "https://workshop.cb-sa.io/teams-{your GitHub username}/",
 					"job": "{your GitHub username}/{GitHub Org name}/helloworld-nodejs/development",
-					"feeds": "release"
+					"feeds": "release",
+					"fanout": []
 				}
 			]
 		},
 		{
-			"name": "Test",
 			"id": "QLggEt9hI",
+			"name": "Test",
 			"gates": [
 				{
 					"id": "v-4fcgpTY",
 					"name": "API Test",
-					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"master": "https://workshop.cb-sa.io/teams-{your GitHub username}/",
 					"job": "{your GitHub username}/{GitHub Org name}/helloworld-api/test",
-					"feeds": "yiK5MUR5Q"
+					"feeds": "yiK5MUR5Q",
+					"fanout": []
 				}
 			]
 		},
 		{
-			"name": "Deploy API",
 			"id": "ExwDnpexcA",
+			"name": "Deploy API",
 			"gates": [
 				{
 					"id": "yiK5MUR5Q",
 					"name": "API Master",
-					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"master": "https://workshop.cb-sa.io/teams-{your GitHub username}/",
 					"job": "{your GitHub username}/{GitHub Org name}/helloworld-api/master",
 					"feeds": "release",
+					"fanout": [],
 					"type": "deployment"
 				}
 			]
 		},
 		{
-			"name": "Deploy App",
 			"id": "8THbC9EXqX",
+			"name": "Deploy App",
 			"gates": [
 				{
 					"id": "release",
 					"name": "UI Master",
-					"master": "https://cje.workshop.beedemo.net/teams-{your GitHub username}/",
+					"master": "https://workshop.cb-sa.io/teams-{your GitHub username}/",
 					"job": "{your GitHub username}/{GitHub Org name}/helloworld-nodejs/master",
+					"fanout": [],
 					"type": "deployment",
 					"feeds": null
 				}
@@ -151,58 +148,32 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 }
 ```
 5. Click the **Save changes** button <p><img src="img/streams/save_json.png" width=800/>
-6. You will have a new Value Stream <p><img src="img/streams/microservice_vs.png" width=800/>
+6. You will have a new Value Stream <p><img src="img/streams/microservice_vs.png" width=800/>.
 
-### Fix Your **helloworld-nodejs** Application
+### Running Your **helloworld-nodejs** Application
 
-Before you fix your fork of the **helloworld-nodejs** repostiory we will run it again by making a simple change and commiting it on your **development** branch. 
+The **helloworld-nodejs** application is a simple NodeJS app that serves a simple index page with a message.
 
-1. Open the GitHub editor for the `Jenkinsfile` file in the **development** branch of your forked **helloworld-nodejs** repository, add the following `library 'cb-days@master'` for a shared librare above the `pipeline` block and then replace the **Test** `stage` with the following **Web Tests** stage and then commit the change to the **development** branch with the commit message ***UI-1001 still broken***
+If you navigate to the `Jenkinsfile` in your fork, you'll notice that there are two stages, a `Web Tests` stage used to test the NodeJS app using a selenium sandbox which runs on the `development` branch and a `Build and Push Image` stage that runs on `master`.
+
+The `UI Dev` gate of the value stream represents the `development` branch of the **helloworld-nodejs** app. The `Web Tests` stage tests whether the hosted nodejs app shows a body of `Hello World!`, spelled correctly.
+
+### Force tests to fail in **helloworld-nodejs** Application
+
+1. Navigate to your fork of **helloworld-nodejs**, select the **development** branch and edit the `hello.js` file. Change the `Hello World!` text on line 13 to say `Hello Worlld!` (misspelled) and then commit the change to the **development** branch with the commit message ***UI-1001 still broken***.
+
 ```
-stage('Web Tests') {
-      agent {
-        kubernetes {
-          label 'nodejs-testcafe'
-          yamlFile 'nodejs-pod.yaml'
-        }
-      }
-      when {
-        beforeAgent true
-        branch 'development'
-      }
-      stages {
-        stage('Nodejs Setup') {
-          steps {
-            checkout scm
-            defineProps('.nodejs-app', [npmPackages: 'express pug'])            
-            container('nodejs') {
-              sh """
-                npm i -S ${npmPackages}
-                node ./hello.js &
-              """
-            }
-          }   
-        }
-        stage('Testcafe') {
-          steps {
-            container('testcafe') {
-              sh '/opt/testcafe/docker/testcafe-docker.sh "chromium --no-sandbox" tests/*.js -r xunit:res.xml'
-            }
-          }   
-        }
-      }  
-      post {
-        success {
-          stash name: 'app', includes: '*.js, public/**, views/*, Dockerfile'
-        }
-        always {
-          junit 'res.xml'
-        }
-      } 
-    }
+res.render('index', { title: 'Hello', message: 'Hello Worlld!', 
 ```
+
 2. Once again, your **helloworld-nodejs** Multibranch **development** job should run and fail and in DevOptics you should see that the **UI Dev** gate has 1 ticket in it and that it failed
+3. In DevOptics you should see that the **UI Dev** gate has 1 ticket in it and that it failed
 3. Now we will fix your app. Open the GitHub editor for the `hello.js` file in the **development** branch of your forked **helloworld-nodejs** repository, on line 13 fix the misspelled ***Worlld*** and then commit the change to the **development** branch with the commit message ***UI-1001 fixed misspelling***
+
+```
+res.render('index', { title: 'Hello', message: 'Hello World!', 
+```
+
 4. Now your job should complete successfully and the **UI Dev** gate should show that it finished successfully - what is your MTTR for the **UI Dev** gate? What is the MTTR for the entire Value Stream?
 5. Now that you have fixed your **helloworld-nodejs** application it is time to merge to the **master** branch and deploy. Create a [Pull Request](https://help.github.com/en/articles/creating-a-pull-request) between the **development** branch and **master** branch of your forked **helloworld-nodejs** repository. 
 6. Changed the **base repository** to the **master** branch of your forked **helloworld-nodejs** repository (not the **cloudbees-days** repository), add a comment and then click the **Create pull request** button 
