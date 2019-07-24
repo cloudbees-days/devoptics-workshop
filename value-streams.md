@@ -77,7 +77,7 @@ Now that you have an initial Value Stream, we will commit a number of changes to
 
 ### Value Stream JSON Editor
 
-In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSON editor is only available to update a Value Stream created by the Visual Editor not create one.
+In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSON editor is only available to update a Value Stream created by the Visual Editor not create one. The following example will walk you through creating another value stream using the JSON editor that encompasses two separate repositories (services).
 
 1. Go back to DevOptics in your browser and switch to the **Value Streams** view and click on the **Create New** button in the upper right corner <p><img src="img/streams/value_streams_views.png" width=800/> This will open the [**Value Stream Visual Editor**](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#devoptics-visual-editor)
 2. Click on the default title in the upper-left and change the title to be **{your GitHub username} Hello App**, hit return and then click the **Save** button in the upper-left to save the Value Stream<p><img src="img/streams/json_change_title.png" width=800/>
@@ -151,7 +151,7 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 }
 ```
 5. Click the **Save changes** button <p><img src="img/streams/save_json.png" width=800/>
-6. You will have a new Value Stream and the **API Master** gate should already have tickets in it <p><img src="img/streams/api_gate.png" width=800/>
+6. You will have a new Value Stream <p><img src="img/streams/microservice_vs.png" width=800/>
 
 ### Fix Your **helloworld-nodejs** Application
 
