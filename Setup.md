@@ -18,11 +18,11 @@ Next, everyone will get their own Jenkins masters referred to as a Team Master.
 
 1. If not in CloudBees Team UI, click on the **Teams** link in the left menu; <p><img src="img/setup/setup-classic-ui-Teams-link.png" width=400/>
 2. Click on the **Create team** button in the center of your screen;<p><img src="img/setup/setup-create-a-team.png" width=300/>
-3. **Name this team** - enter a name for your team - **IMPORTANT: to ensure uniqueness, use {your GitHub username}** and then click **Next**;<p><img src="img/setup/setup-create-team-wizard.png" width=650/>
+3. **Name this team** - enter a name for your team - **IMPORTANT: to ensure uniqueness, use {your GitHub username}** and then click **Next**;<p><img src="img/setup/setup-name-this-team.png" width=650/>
 4. **Choose an icon for this team** to help uniquely identify your team - select an icon and color for your team and then click **Next**;
 5. **Add people to this team** - your user will show up as a **Team Admin** and we won't be adding any additional users right now, but feel free to look around and then click **Next**;
 6. **Select team master creation recipe** - click on the drop-down to see the options, but select the top option: **Workshop Default** recipe;<p><img src="img/setup/setup-create-team-recipe-2.png" width=450/>
-7. Finally, click the **Create team** button. 
+7. Finally, click the **Create team** button. <p><img src="img/setup/setup-create-team.png" width=450/>
 8. While your master is being  created (**it takes anywhere from 2-3 minutes to provision your Team Master**), move onto the next section **Create a GitHub.com user account**
 
 ## Create a GitHub.com user account
