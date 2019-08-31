@@ -1,5 +1,14 @@
 # CloudBees DevOptics Workshop
-This workshop will show how DevOptics allows organizations to measure, analyze and manage DevOps; and how DevOptics provides a comprehensive view of the status of your CD platform and software value streams, correlated from data collected across software delivery pipelines. 
+This workshop will provide a basic understanding of how to create Value Streams, monitor the Platform at scale and continually measure DevOps performance leveraging features of CloudBees DevOptics. 
+
+This repository contains instructions and learning materials for the workshop that is designed to teach the following key concepts:
+
+  * How specific features of CloudBees DevOptics allows organizations to measure, analyze and accelerate DevOps performance?
+  * Benefits of using CloudBees DevOptics [Value Streams](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#_value_stream_concepts) in concert with [Jenkins Pipelines](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline)? 
+  * How to create [reusable templates for Value Streams](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#devoptics-value-stream-template-microservices)?
+  * How CloudBees DevOptics [Run Insights](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/#_run_insights_concepts) provides a comprehensive view of the status of your CD platform and software delivery pipelines?
+
+To get started goto the [**Setup Instructions**](Setup.md).
 
 # Workshop Prerequisites
 
@@ -16,16 +25,16 @@ The setup guide will walk students through:
     - admin:org_hook
     - user: all
    
-To start on the setup, navigate to **[Setup](Setup.md)**.
+Detailed setup instructions are available at **[Setup](Setup.md)**
 
 # Workshop Labs
 
 **The labs covered in this workshop are available at the following links:**
 
 * Lab 1. [Introduction to Value Streams using CloudBees DevOptics](./value-streams.md)
-* Lab 2. [Measure DevOps performance with Value Streams](./value-streams-measurement.md)
-* Lab 3. [Value Streams as Code](./value-streams-as-code.md)
-* Lab 4. [Platform monitoring using DevOptics Run Insights](./insights.md)
+* Lab 2. [Measure DevOps Performance with Value Streams](./value-streams-measurement.md)
+* Lab 3. [Value Stream as Code](./value-streams-as-code.md)
+* Lab 4. [Platform Monitoring using DevOptics Run Insights](./insights.md)
 
 # Disclaimer
 
