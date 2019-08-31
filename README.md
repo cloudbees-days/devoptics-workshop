@@ -3,7 +3,7 @@ This workshop will provide a basic understanding of how to create Value Streams,
 
 This repository contains instructions and learning materials for the workshop that is designed to teach the following key concepts:
 
-  * How specific features of CloudBees DevOptics allows organizations to measure, analyze and accelerate DevOps performance?
+  * How specific features of CloudBees DevOptics allows organizations to measure, analyze and accelerate [DevOps performance](https://www.cloudbees.com/resource/whitepaper/devops-performance-importance-measuring-throughput-and-stability)?
   * Benefits of using CloudBees DevOptics [Value Streams](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#_value_stream_concepts) in concert with [Jenkins Pipelines](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline)? 
   * How to create [reusable templates for Value Streams](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#devoptics-value-stream-template-microservices)?
   * How CloudBees DevOptics [Run Insights](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/#_run_insights_concepts) provides a comprehensive view of the status of your CD platform and software delivery pipelines?
