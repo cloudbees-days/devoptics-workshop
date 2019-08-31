@@ -1,4 +1,5 @@
-# DevOptics Run Insights
+# Platform monitoring using DevOptics Run Insights
+
 [DevOptics Run Insights](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/) provides CD Platform monitoring and helps shared services teams improve DevOps performance by exposing infrastructure inefficiencies, allowing automation constraints to be uncovered and removed. It provides you with insights into:
 
 * Server workloads
@@ -28,3 +29,6 @@ Run Insights lets you filter the shown data per master or group of masters to un
 
 To learn more about DevOptics Run Insights refer to [CloudBees' Run Insights documentation](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/run_insights/).
 
+You've reached the end of the CloudBees DevOptics workshop! Click here to head back to the main list of [**labs**](./README.md#workshop-labs).
+
+You may also check out the other labs offered by us here: [CloudBees Days Workshop](https://github.com/cloudbees-days).

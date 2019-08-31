@@ -22,8 +22,10 @@ To start on the setup, navigate to **[Setup](Setup.md)**.
 
 **The labs covered in this workshop are available at the following links:**
 
-* Lab 1. [Introduction to Value Streams](./value-streams.md)
-* Lab 2. [Introduction to Run Insights](./insights.md)
+* Lab 1. [Introduction to Value Streams using CloudBees DevOptics](./value-streams.md)
+* Lab 2. [Measure DevOps performance with Value Streams](./value-streams-measurement.md)
+* Lab 3. [Value Streams as Code](./value-streams-as-code.md)
+* Lab 4. [Platform monitoring using DevOptics Run Insights](./insights.md)
 
 # Disclaimer
 
