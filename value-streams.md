@@ -60,7 +60,7 @@ Note: We may switch between *Classic* and *Blue Ocean* UIs during the workshop, 
 
 ## Login to CloudBees DevOptics
 
-Go to https://devoptics.cloudbees.com in your browser and login with the email **beedemo.guest@gmail.com** and the password provided by your instructor <p><img src="img/insights/devoptics_login.png" width=800/>
+Go to https://devoptics.cloudbees.com in your browser and login with the email **beedemo.guest@gmail.com** and the password provided by your instructor <p><img src="img/streams/devoptics_login.png" width=800/>
 
 ### Value Stream Visual Editor
 DevOptics visual editor lets you model different phases and gates of your value stream.
