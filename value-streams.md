@@ -78,7 +78,7 @@ Once modeled you can instrument the Jenkins Pipelines for DevOptics to track tic
   - **Master**: https://workshop.cb-sa.io/teams-{your GitHub username}/
   - **Job**: {your GitHub username}/{your GitHub Org name}/helloapp-api/development
   - **Phase**: Build
-  - leave the other fields as is <p><img src="img/streams/build_gate_form.png" width=500/>
+  - leave the other fields as is <p><img src="img/streams/build_gate_form.png" width=800/>
   - **Save** the form
 5. Click on the **Untitled Gate** below the **Test** phase, then click on the **cog** to configure the gate and fill out the gate configuration form:
   - **Gate Name**: test branch
@@ -92,7 +92,7 @@ Once modeled you can instrument the Jenkins Pipelines for DevOptics to track tic
   - **Master**: https://workshop.cb-sa.io/teams-{your GitHub username}/
   - **Job**: {your GitHub username}/{your GitHub Org name}/helloapp-api/master
   - **Phase**: Release
-  - Check the **This is a deployment job** checkbox <p><img src="img/streams/release_gate_form.png" width=500/>
+  - Check the **This is a deployment job** checkbox <p><img src="img/streams/release_gate_form.png" width=800/>
   - **Save** the form
 7. Click on the **Save** button to save the Value Stream <p><img src="img/streams/save_value_stream.png" width=800/>
 8. Done! Your DevOptics Value Stream is ready for review. <p><img src="img/streams/onsave_value_stream.png" width=800/>
