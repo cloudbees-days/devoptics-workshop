@@ -103,4 +103,4 @@ res.render('index', { title: 'Hello', message: 'Hello World!',
 7. A job will be created for the pull request and once it has completed successfully your pull request will show that **All checks have passed**. Go ahead and click the **Merge pull request** button and then click the **Confirm merge** button but DO NOT delete the **development** branch <p><img src="img/code/ui_merge_pr.png" width=600/>
 8. In your DevOptics Value Stream you should see the **UI-1001** ticket move from the **UI Dev** gate to the **UI Master** gate. What is your deployment frequency? <p><img src="img/code/final_microservice_vs.png" width=800/>
 
-The next DevOptics feature that we will look at is [DevOptics Run Insights](./insights.md).
+You may proceed to the next lab [*Lab 4. Platform Monitoring using Run Insights*](./insights.md) or head back to the main list of the [**labs**](./README.md#workshop-labs) when you are ready.
