@@ -13,7 +13,7 @@
 ## Take a Tour of DevOptics Run Insights
 Run insights provide you with a real-time and historical view of job and pipeline activity. You can connect any number of masters for an aggregate view across the organization. Masters can be a heterogeneous mix of CloudBees Core and Jenkins. Metrics are viewable over an adjustable time period.
 
-Click on Run Insights in the top navbar to switch view <p><img src="img/insights/insights_view.png" width=500/>
+Click on Run Insights in the top navbar to switch view <p><img src="img/insights/insights_view.png" width=650/>
 
 
 ## Filter by Team Master
