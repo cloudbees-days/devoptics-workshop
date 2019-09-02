@@ -22,7 +22,7 @@ Now that you have an initial Value Stream, we will commit a number of changes to
 15. Change the **base repository** to the **master** branch of your forked **helloapp-api** repository (not the **cloudbees-dwjw** repository), add a comment and then click the **Create pull request** button
 16. Click the **Merge pull request** button and then click the **Confirm merge** button but **DO NOT delete the test branch**
 17. Switch to your DevOptics Value Streams window and you should eventually see the **master branch** gate updated to show that it has 1 ticket in it and that it is successful<p><img src="img/measure/metrics_master_branch_success.png" width=800/>
-18. Next, click on the **test branch** gate and you will now have gate metics for *Mean Lead Time*, *Deployment Frequency*, *Change Failure Rate*, *Mean Processing Time* and *Mean Time to Recovery*.<p><img src="img/measure/metrics_test_gate_df.png" width=800/>
+18. Next, click on the **test branch** gate and you will now have [DevOps performance metics]('https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#_devops_performance_metrics') for the gate.<p><img src="img/measure/metrics_test_gate_df.png" width=800/>
 19. Next, click on the *chevron* icon to switch to view the metrics for the entire value stream as opposed to just the **test gate**<p><img src="img/measure/metrics_for_value_stream.png" width=800/>
 
 You may proceed to the next lab [*Lab 3. Value Streams as Code*](./value-streams-as-code.md) or head back to the main list of the [**labs**](./README.md#workshop-labs) when you are ready.

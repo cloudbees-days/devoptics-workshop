@@ -85,7 +85,7 @@ In addition to the Visual Editor, DevOptics also provides a JSON editor. The JSO
 
 The **helloapp-nodejs** application is a simple NodeJS app that serves a simple index page with a message. 
 
-If you navigate to **helloapp-nodejs** in your Jenkins master, you'll notice that there are two stages, a `Web Tests` stage used to test the NodeJS app using a selenium sandbox which runs on the `development` branch and a `Build and Push Image` stage that runs on `master`. <p><img src="img/code/hellonodejs_dev_branch.png" width=800/>
+If you navigate to **helloapp-nodejs** in your Jenkins master, you'll notice that there are two stages, a `Web Tests` stage used to test the NodeJS app using a [TestCafe](https://devexpress.github.io/testcafe/) container which runs on the `development` branch and a `Build and Push Image` stage that runs on `master`. <p><img src="img/code/hellonodejs_dev_branch.png" width=800/>
 
 The `UI Dev` gate of the value stream represents the `development` branch of the **helloapp-nodejs** app. The `Web Tests` stage tests whether the hosted nodejs app shows a body of `Hello World!`, spelled correctly. The current state of the app has an error (the body shows `Hello Worlld`) that we will fix in the next few steps. <p><img src="img/code/hellonodejs_failed_test.png" width=800/>
 
@@ -101,6 +101,8 @@ res.render('index', { title: 'Hello', message: 'Hello World!',
 5. Now that you have fixed your **helloapp-nodejs** application it is time to merge to the **master** branch and deploy. Create a [Pull Request](https://help.github.com/en/articles/creating-a-pull-request) between the **development** branch and **master** branch of your forked **helloapp-nodejs** repository. 
 6. Changed the **base repository** to the **master** branch of your forked **helloapp-nodejs** repository (not the **cloudbees-dwjw** repository), add a comment and then click the **Create pull request** button <p><img src="img/code/ui_dev_to_master_pr.png" width=600/>
 7. A job will be created for the pull request and once it has completed successfully your pull request will show that **All checks have passed**. Go ahead and click the **Merge pull request** button and then click the **Confirm merge** button but DO NOT delete the **development** branch <p><img src="img/code/ui_merge_pr.png" width=600/>
-8. In your DevOptics Value Stream you should see the **UI-1001** ticket move from the **UI Dev** gate to the **UI Master** gate. What is your deployment frequency? <p><img src="img/code/final_microservice_vs.png" width=800/>
+8. In your DevOptics Value Stream you should see the **UI-1001** ticket move from the **UI Dev** gate to the **UI Master** gate. Note the [DevOps performance metics]('https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#_devops_performance_metrics') for the gate<p><img src="img/code/final_microservice_vs.png" width=800/>
+9. Next, click on the *chevron* icon to switch to view the [DevOps performance metics]('https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/value_streams/#_devops_performance_metrics') for the entire value stream. 
+<p><img src="img/code/final_microservice_vs_metrics.png" width=800/>
 
 You may proceed to the next lab [*Lab 4. Platform Monitoring using Run Insights*](./insights.md) or head back to the main list of the [**labs**](./README.md#workshop-labs) when you are ready.

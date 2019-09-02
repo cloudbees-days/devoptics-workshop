@@ -38,7 +38,7 @@ In order to complete the following exercise you should have [forked the followin
 * https://github.com/cloudbees-days/helloapp-api
 * https://github.com/cloudbees-days/helloapp-nodejs  
 
-Once that repository is forked:
+Once those repositories are forked:
 
 1. **IMPORTANT** Navigate back to the top-level of your **Team Master** and click on the folder with the same name as your **Team Master**. This is important if you want to use [Blue Ocean](https://jenkins.io/projects/blueocean/) to visualize the Pipeline runs, because only jobs under this folder will show up in Blue Ocean.<p><img src="img/intro/org_folder_team_folder.png" width=800/> 
 2. Click on **New Item** in the left navigation menu - make sure that you are in the folder with the same name as your team, and not at the root of your Team Master  <p><img src="img/intro/org_folder_bluesteel_folder.png" width=800/>
@@ -49,13 +49,13 @@ Once that repository is forked:
 7. Make sure that the **Owner** field matches the name of your GitHub Organization name
 8. Click the **Save** button <p><img src="img/intro/org_folder_save.png" width=800/>
 9. Click on the bread-crumb link to go back to your **GitHub Organization** Jenkins Pipeline project folder
-10. You should now see the two forked **helloapp** repositories as Jenkins jobs! <p><img src="img/intro/org_scan_helloapp_repos.png" width=800/>
-11. Click on **Open Blue Ocean** in the left navigation menu - to open list of jobs displayed in *Blue Ocean* UI.<p><img src="img/intro/org_scan_helloapp_blueocean_ui.png" width=850/>
+10. You should now see the two forked **helloapp** repositories as Jenkins Multibranch Pipeline jobs! <p><img src="img/intro/org_scan_helloapp_repos.png" width=800/>
+11. Click on **Open Blue Ocean** in the left navigation menu - to view the Pipeline jobs displayed in *Blue Ocean* UI.<p><img src="img/intro/org_scan_helloapp_blueocean_ui.png" width=850/>
 12. View the pipeline jobs in *Blue Ocean* UI 
 Note: We may switch between *Classic* and *Blue Ocean* UIs during the workshop, as needed - *Classic* UI would be utilized for detailed logs and administration purposes while *Blue Ocean* UI would be primarily used for viewing and running Jenkins pipelines. <p><img src="img/intro/setup_blue_ocean_ui_helloapp.png" width=800/>
 13. Let's review your first sample pipeline - **{your GitHub organization}/helloapp-api**. Verify if all branches for  *helloapp-api* are in a successful state, after the pipeline runs are completed. <p><img src="img/intro/setup_blue_ocean_helloapi_success.png" width=800/>
-16. Now let's verify the build status of our second sample pipeline - **{your GitHub organization}/helloapp-nodejs**. The *development* branch should be in a failed state, whereas the *master* branch should be successful state. <p><img src="img/intro/setup_blue_ocean_hellonodejs.png" width=800/>
-17. This completes the setup for DevOptics workshop! In short time, you created your very own CloudBees Core Team (Jenkins) Master, onboarded a few sample multi-branch pipelines and did basic walk through to get more comfortable navigating the CloudBees Core / Jenkins Master UI! 
+16. Now let's verify the build status of our second sample pipeline - **{your GitHub organization}/helloapp-nodejs**. The *development* branch should be in a failed state, whereas the *master* branch should have completed successfully. <p><img src="img/intro/setup_blue_ocean_hellonodejs.png" width=800/>
+17. This completes the setup for the DevOptics workshop! In short time, you created your very own CloudBees Core Team (Jenkins) Master, onboarded a few sample multi-branch pipelines and did a basic walk through to get more comfortable navigating the CloudBees Core / Jenkins Master UI! 
 18. Now, let's login to CloudBees DevOptics to gain quick insight, capture real-time metrics & visibility into our sample, interdependent pipelines...
 
 ## Login to CloudBees DevOptics

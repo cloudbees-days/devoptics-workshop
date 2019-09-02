@@ -1,5 +1,5 @@
 # CloudBees DevOptics Workshop
-This workshop will provide a basic understanding of how to create Value Streams, monitor the Platform at scale and continually measure DevOps performance leveraging features of CloudBees DevOptics. 
+This workshop will provide a basic understanding of how to create Value Streams, monitor the Platform at scale and continually measure DevOps performance leveraging features of [CloudBees DevOptics](https://go.cloudbees.com/docs/cloudbees-documentation/devoptics-user-guide/). 
 
 This repository contains instructions and learning materials for the workshop that is designed to teach the following key concepts:
 

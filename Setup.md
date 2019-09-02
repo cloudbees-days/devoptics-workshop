@@ -64,4 +64,4 @@ The workshop utilizes the **helloapp-nodejs** repository from the [CloudBees DWJ
 You should see the following **Create a new Pipeline** screen for your Team:
 <p><img src="img/setup/setup-success.png" width=700/>
 
-You may proceed to the next set of [**labs**](./README.md#workshop-labs) - once you have successfully completed the setup.
+You may proceed to the [**labs**](./README.md#workshop-labs) - once you have successfully completed the setup.
