@@ -7,13 +7,13 @@ Now that you have an initial Value Stream, we will commit a number of changes to
 ```
         error 'fake error to force failure in test stage/gate'
 ``` 
-3. Commit the change to your **development** branch with a commit message of: **API-1001 new feature**  <p><img src="img/measure/fake_error_step.png" width=700/>
+3. Commit the change to your **development** branch with a commit message of: **API-1 new feature**  <p><img src="img/measure/fake_error_step.png" width=700/>
 4. Once the job for your **development** branch completes, switch to your DevOptics Value Streams window and you should see the **development branch** gate updated to show that it has 1 ticket in it and that it completed successfully<p><img src="img/measure/metrics_dev_branch.png" width=800/>
 5. Now we will create a [Pull Request](https://help.github.com/en/articles/creating-a-pull-request) between the **development** branch and **test** branch of your forked **helloapp-api** repository. Navigate to your forked **helloapp-api** repository in GitHub - click on the **New pull request** button
 6. Change the **base repository** to the **test** branch of your forked **helloapp-api** repository (not the **cloudbees-dwjw** repository), add a comment and then click the **Create pull request** button <p><img src="img/measure/metrics_dev_to_test_pr.png" width=700/>
 7. Click the **Merge pull request** button and then click the **Confirm merge** button but **DO NOT delete the development branch**
 8. Switch to your DevOptics Value Streams window and you should eventually see the **test branch** gate updated to show that it has 1 ticket in it and that it failed<p><img src="img/measure/metrics_test_branch_fail.png" width=800/>
-9. Delete the `error` step from the `Test` stage on the **development** branch of your fork of the  ***helloapp-api*** repository and commit the change to the **development** branch with the following commit message: **API-1001 fix**
+9. Delete the `error` step from the `Test` stage on the **development** branch of your fork of the  ***helloapp-api*** repository and commit the change to the **development** branch with the following commit message: **API-1 fix**
 10. Create another [Pull Request](https://help.github.com/en/articles/creating-a-pull-request) between the **development** branch and **test** branch of your forked **helloapp-api** repository. Navigate to your forked **helloapp-api** repository in GitHub - click on the **New pull request** button
 11. Change the **base repository** to the **test** branch of your forked **helloapp-api** repository (not the **cloudbees-dwjw** repository), add a comment and then click the **Create pull request** button <p><img src="img/measure/metrics_dev_to_test_pr_fix.png" width=700/>
 12. Click the **Merge pull request** button and then click the **Confirm merge** button but **DO NOT delete the development branch**
